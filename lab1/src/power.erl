@@ -4,9 +4,9 @@
 %%% @doc
 %%%
 %%% @end
-%%% Created : 14. mar 2019 10:39
+%%% Created : 27. mar 2019 14:09
 %%%-------------------------------------------------------------------
--module(makota).
+-module(power).
 -author("pawel").
 
 %% API
