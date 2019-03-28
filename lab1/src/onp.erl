@@ -20,46 +20,32 @@ onp(Expression) ->
 calculate([], Stack) ->
   hd(Stack);
 
-calculate([H | T], Stack) when H == "+" ->
-  [B | Stack1] = Stack,
-  [A | Stack2] = Stack1,
-  calculate(T, [A+B | Stack2]);
+calculate(["+" | T], [B,A |Stack]) ->
+  calculate(T, [A+B | Stack]);
 
-calculate([H | T], Stack) when H == "-" ->
-  [B | Stack1] = Stack,
-  [A | Stack2] = Stack1,
-  calculate(T, [A-B | Stack2]);
+calculate(["-" | T], [B,A |Stack]) ->
+  calculate(T, [A-B | Stack]);
 
-calculate([H | T], Stack) when H == "*" ->
-  [B | Stack1] = Stack,
-  [A | Stack2] = Stack1,
-  calculate(T, [A*B | Stack2]);
+calculate(["*" | T], [B,A |Stack]) ->
+  calculate(T, [A*B | Stack]);
 
-calculate([H | T], Stack) when H == "/" ->
-  [B | Stack1] = Stack,
-  [A | Stack2] = Stack1,
-  calculate(T, [A div B | Stack2]);
+calculate(["/" | T], [B,A |Stack]) ->
+  calculate(T, [A div B | Stack]);
 
-calculate([H | T], Stack) when H == "sqrt" ->
-  [A | Stack1] = Stack,
-  calculate(T, [math:sqrt(A) | Stack1]);
+calculate(["sqrt" | T], [A, Stack]) ->
+  calculate(T, [math:sqrt(A) | Stack]);
 
-calculate([H | T], Stack) when H == "pow" ->
-  [B | Stack1] = Stack,
-  [A | Stack2] = Stack1,
-  calculate(T, [math:pow(A, B) | Stack2]);
+calculate(["pow" | T], [B,A | Stack]) ->
+  calculate(T, [math:pow(A, B) | Stack]);
 
-calculate([H | T], Stack) when H == "sin" ->
-  [A | Stack1] = Stack,
-  calculate(T, [math:sin(A) | Stack1]);
+calculate(["sin" | T], [A | Stack]) ->
+  calculate(T, [math:sin(A) | Stack]);
 
-calculate([H | T], Stack) when H == "cos" ->
-  [A | Stack1] = Stack,
-  calculate(T, [math:cos(A) | Stack1]);
+calculate(["cos" | T], [A |Stack]) ->
+  calculate(T, [math:cos(A) | Stack]);
 
-calculate([H | T], Stack) when H == "tan" ->
-  [A | Stack1] = Stack,
-  calculate(T, [math:tan(A) | Stack1]);
+calculate(["tan" | T], [A | Stack]) ->
+  calculate(T, [math:tan(A) | Stack]);
 
 calculate([H | T], Stack) ->
   Number = list_to_float(H),
