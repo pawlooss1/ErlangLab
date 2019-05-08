@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2979751-3607-4212-9d1e-81e549a299f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../pingpong/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pingpong/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pingpong/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pingpong/pingpong.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pingpong/src/pingpong.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pollution.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pollution.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-460">
-              <caret line="12" column="131" selection-start-line="12" selection-start-column="131" selection-end-line="12" selection-end-column="131" />
+            <state relative-caret-position="426">
+              <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -68,6 +64,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,14 +99,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554938139482" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557326328820" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/lab5" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -149,12 +145,15 @@
       <workItem from="1554898747770" duration="17504000" />
       <workItem from="1554937928158" duration="215000" />
       <workItem from="1554938227288" duration="5055000" />
-      <workItem from="1554968969547" duration="609000" />
+      <workItem from="1554968969547" duration="610000" />
+      <workItem from="1555156956173" duration="2398000" />
+      <workItem from="1557268465357" duration="796000" />
+      <workItem from="1557310094948" duration="14632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23383000" />
+    <option name="totallyTimeSpent" value="41210000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -167,8 +166,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14941302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -177,7 +177,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27729258" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27729258" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -227,8 +227,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pollution.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="12" column="131" selection-start-line="12" selection-start-column="131" selection-end-line="12" selection-end-column="131" />
+        <state relative-caret-position="426">
+          <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
         </state>
       </provider>
     </entry>
