@@ -11,6 +11,7 @@
 
 %% API
 -export([start/0, stop/0, addStation/2, addValue/4, removeValue/3, getOneValue/3, getStationMean/2, getDailyMean/2, getHourlyMean/3]).
+-export([init/0]).
 
 start() ->
   register(pollutionServer, spawn(pollution_server, init, [])).
@@ -55,7 +56,7 @@ loop(Monitor) ->
 %% client
 
 call(Message, Arguments) ->
-  pollution_server ! {request, self(), Message, Arguments},
+  pollutionServer ! {request, self(), Message, Arguments},
   receive
     {reply, Reply} -> Reply
   end.

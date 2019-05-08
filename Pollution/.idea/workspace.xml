@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2979751-3607-4212-9d1e-81e549a299f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pollution_server.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pollution_test.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pollution.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pollution.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pollution.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pollution_server.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution_server.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -20,20 +22,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pollution.erl">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="561">
+              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
+        <entry file="file://$PROJECT_DIR$/src/pollution.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+            <state relative-caret-position="880">
+              <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/pollution_test.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="49" column="74" lean-forward="true" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -58,8 +69,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pollution.erl" />
         <option value="$PROJECT_DIR$/src/pollution_server.erl" />
+        <option value="$PROJECT_DIR$/src/pollution.erl" />
+        <option value="$PROJECT_DIR$/test/pollution_test.erl" />
       </list>
     </option>
   </component>
@@ -115,10 +127,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557332514700" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557338584725" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/lab5" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -132,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Erlang Eunit.Tests">
     <configuration name="Console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="Pollution" />
       <option name="allowRunningInParallel" value="false" />
@@ -142,6 +157,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="Pollution" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="debugOptions">
+        <ErlangDebugOptions>
+          <option name="autoUpdateModulesNotToInterpret" value="true" />
+          <option name="modulesNotToInterpret">
+            <set />
+          </option>
+        </ErlangDebugOptions>
+      </option>
+      <option name="workDirectory" value="$PROJECT_DIR$" />
+      <option name="functionNames">
+        <set />
+      </option>
+      <option name="kind" value="MODULE" />
+      <option name="moduleNames">
+        <set>
+          <option value="pollution_test" />
+        </set>
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Erlang Console.Console" />
+      <item itemvalue="Erlang Eunit.Tests" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -159,12 +203,44 @@
       <workItem from="1554968969547" duration="610000" />
       <workItem from="1555156956173" duration="2398000" />
       <workItem from="1557268465357" duration="796000" />
-      <workItem from="1557310094948" duration="18738000" />
+      <workItem from="1557310094948" duration="25169000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Tests - 2019.05.08 at 19h 32m 16s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file=" - 2019.05.08 at 19h 34m 16s.xml">
+      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file=" - 2019.05.08 at 19h 38m 22s.xml">
+      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file=" - 2019.05.08 at 19h 38m 58s.xml">
+      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file=" - 2019.05.08 at 19h 39m 07s.xml">
+      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.08 at 19h 39m 28s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.08 at 19h 39m 35s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.08 at 20h 02m 02s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.08 at 20h 02m 07s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.08 at 20h 03m 07s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45316000" />
+    <option name="totallyTimeSpent" value="51747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -179,7 +255,7 @@
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14941302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14941302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -188,8 +264,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27729258" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27729258" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969433" />
@@ -241,22 +317,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        <state relative-caret-position="561">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pollution.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="880">
+          <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/pollution_test.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="49" column="74" lean-forward="true" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Erlang</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Pollution</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

@@ -74,10 +74,17 @@ unpackStationAndMeasurements(Name, NameStation) ->
   #station{measurements = Measurements} = Station,
   {Station, Measurements}.
 
+safeUpdate(Measurements, Measurement, false) ->
+  [Measurement | Measurements];
+safeUpdate(Measurements, _, _) ->
+  Measurements.
+
 addValueSecure(Name, DateTime, MeasureType, Value, NameStation, CoordsName) ->
   {Station, Measurements} = unpackStationAndMeasurements(Name, NameStation),
   Measurement = #measurement{type = MeasureType, value = Value, datetime = DateTime},
-  UpdatedMeasurements = (Measurements -- [Measurement]) ++ [Measurement],
+  F = fun({measurement, Type, _, Date}, Acc) -> Acc or ((DateTime == Date) and (MeasureType == Type)) end,
+  CheckList = lists:foldl(F, false, Measurements),
+  UpdatedMeasurements = safeUpdate(Measurements, Measurement, CheckList),
   {NameStation#{Name := Station#station{measurements = UpdatedMeasurements}}, CoordsName}.
 
 removeValueSecure(Name, DateTime, MeasureType, _, NameStation, CoordsName) ->
