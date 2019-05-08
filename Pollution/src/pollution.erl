@@ -18,30 +18,31 @@
 % Monitor : {#{Name => Station}, #{Coordinates => Name}}
 createMonitor() -> {#{}, #{}}.
 
-addStation(Name, Coordinates, Monitor) ->
+addStation(Monitor, Name, Coordinates) ->
   {NameStation, CoordsName} = Monitor,
   ContainsName = maps:is_key(Name, NameStation),
   ContainsCoords = maps:is_key(Coordinates, CoordsName),
   addStationSecure(Name, Coordinates, Monitor, ContainsName, ContainsCoords).
 
-addValue(Key, DateTime, MeasureType, Value, Monitor) ->
+addValue(Monitor, Key, DateTime, MeasureType, Value) ->
   applySecureFunction(Key, DateTime, MeasureType, Value, Monitor, fun addValueSecure/6).
 
-removeValue(Key, DateTime, MeasureType, Monitor) ->
+removeValue(Monitor, Key, DateTime, MeasureType) ->
   applySecureFunction(Key, DateTime, MeasureType, none, Monitor, fun removeValueSecure/6).
 
-getOneValue(Key, DateTime, MeasureType, Monitor) ->
+getOneValue(Monitor, Key, DateTime, MeasureType) ->
   applySecureFunction(Key, DateTime, MeasureType, none, Monitor, fun getValueSecure/6).
 
-getStationMean(Key, MeasureType, Monitor)->
+getStationMean(Monitor, Key, MeasureType)->
   applySecureFunction(Key, none, MeasureType, none, Monitor, fun getStationMeanSecure/6).
 
-getDailyMean(Date, MeasureType, Monitor) ->
+getDailyMean(Monitor, Date, MeasureType) ->
   applySecureFunction(none, Date, MeasureType, none, Monitor, fun getDailyMeanSecure/5).
 
-getHourlyMean(Key, Time, MeasureType, Monitor) ->
+getHourlyMean(Monitor, Key, Time, MeasureType) ->
   applySecureFunction(Key, Time, MeasureType, 0, Monitor, fun hourlyMeanSecure/6).
 
+%% private functions
 
 addStationSecure(Name, Coordinates, Monitor, false, false) ->
   {NameStation, CoordsName} = Monitor,
