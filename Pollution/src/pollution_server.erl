@@ -24,7 +24,7 @@ init() ->
 
 %% server
 
-checkAndLoop(ClientPid, OldMonitor, Code) when is_atom(Code)->
+checkAndLoop(ClientPid, OldMonitor, Code) when is_atom(Code) ->
   ClientPid ! {reply, Code},
   loop(OldMonitor);
 checkAndLoop(ClientPid, OldMonitor, Result) when is_number(Result) ->
@@ -53,7 +53,7 @@ loop(Monitor) ->
       checkAndLoop(Pid, Monitor, apply(pollution, getHourlyMean, [Monitor | Arguments]));
     {request, Pid, letItCrush, Arguments} ->
       Pid ! {reply, ok},
-      maps:get(1,1)
+      maps:get(1, 1)
   end.
 
 %% client
@@ -65,10 +65,17 @@ call(Message, Arguments) ->
   end.
 
 addStation(Name, Coordinates) -> call(addStation, [Name, Coordinates]).
+
 addValue(Key, DateTime, MeasureType, Value) -> call(addValue, [Key, DateTime, MeasureType, Value]).
+
 removeValue(Key, DateTime, MeasureType) -> call(removeValue, [Key, DateTime, MeasureType]).
+
 getOneValue(Key, DateTime, MeasureType) -> call(getOneValue, [Key, DateTime, MeasureType]).
+
 getStationMean(Key, MeasureType) -> call(getStationMean, [Key, MeasureType]).
+
 getDailyMean(Date, MeasureType) -> call(getDailyMean, [Date, MeasureType]).
+
 getHourlyMean(Key, Time, MeasureType) -> call(getHourlyMean, [Key, Time, MeasureType]).
+
 crash() -> call(letItCrush, []).

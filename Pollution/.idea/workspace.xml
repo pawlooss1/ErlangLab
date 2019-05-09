@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pollution.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pollution_gen_server.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution_gen_server.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pollution_server.erl" beforeDir="false" afterPath="$PROJECT_DIR$/src/pollution_server.erl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pollution_test.erl" beforeDir="false" afterPath="$PROJECT_DIR$/test/pollution_test.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab4/src/incrementator.erl" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/src/incrementator.erl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pingpong/.idea/workspace.xml" afterDir="false" />
@@ -24,17 +26,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="26" selection-start-line="26" selection-end-line="34" selection-end-column="19" />
+            <state relative-caret-position="354">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pollution_gen_server.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pollution_gen_server.erl">
+        <entry file="file://$PROJECT_DIR$/test/pollution_gen_server_test.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -42,26 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pollution_server_sup.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pollution.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1030">
-              <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/pollution_test.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -77,6 +79,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Erlang Module" />
+        <option value="Erlang EUnit Tests" />
       </list>
     </option>
   </component>
@@ -86,11 +89,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/pollution_test.erl" />
         <option value="$PROJECT_DIR$/src/pollution_server_sup.erl" />
+        <option value="$PROJECT_DIR$/src/pollution.erl" />
+        <option value="$PROJECT_DIR$/test/pollution_test.erl" />
+        <option value="$PROJECT_DIR$/test/pollution_gen_server_test.erl" />
         <option value="$PROJECT_DIR$/src/pollution_server.erl" />
         <option value="$PROJECT_DIR$/src/pollution_gen_server.erl" />
-        <option value="$PROJECT_DIR$/src/pollution.erl" />
       </list>
     </option>
   </component>
@@ -135,18 +139,23 @@
               <item name="Pollution" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Pollution" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pollution" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557408797553" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557427248625" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/lab5" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -166,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Erlang Console.Console">
+  <component name="RunManager" selected="Erlang Eunit.Tests">
     <configuration name="Console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="Pollution" />
       <option name="allowRunningInParallel" value="false" />
@@ -224,43 +233,44 @@
       <workItem from="1557268465357" duration="796000" />
       <workItem from="1557310094948" duration="25814000" />
       <workItem from="1557384077140" duration="7870000" />
+      <workItem from="1557421148245" duration="5880000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2019.05.08 at 19h 32m 16s.xml">
-      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file=" - 2019.05.08 at 19h 34m 16s.xml">
-      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file=" - 2019.05.08 at 19h 38m 22s.xml">
-      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file=" - 2019.05.08 at 19h 38m 58s.xml">
-      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file=" - 2019.05.08 at 19h 39m 07s.xml">
-      <configuration name="" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Tests - 2019.05.08 at 19h 39m 28s.xml">
-      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Tests - 2019.05.08 at 19h 39m 35s.xml">
-      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Tests - 2019.05.08 at 20h 02m 02s.xml">
-      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Tests - 2019.05.08 at 20h 02m 07s.xml">
-      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="Tests - 2019.05.08 at 20h 03m 07s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 18h 59m 36s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 19h 16m 10s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 19h 18m 58s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 19h 28m 53s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 19h 44m 45s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 19h 46m 16s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 20h 06m 06s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 20h 11m 29s.xml">
+      <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Tests - 2019.05.09 at 20h 14m 18s.xml">
       <configuration name="Tests" configurationId="ErlangUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60262000" />
+    <option name="totallyTimeSpent" value="66142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,8 +285,8 @@
     <frame x="0" y="-1" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989083" visible="true" weight="0.15101388" />
-      <window_info id="Structure" order="1" sideWeight="0.5010917" side_tool="true" visible="true" weight="0.15101388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49734512" visible="true" weight="0.15261473" />
+      <window_info id="Structure" order="1" sideWeight="0.50353354" side_tool="true" weight="0.15261473" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -284,7 +294,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25873363" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29039302" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -335,38 +345,45 @@
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pollution_server_sup.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="26" selection-start-line="26" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pollution_gen_server.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pollution.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+        <state relative-caret-position="1485">
+          <caret line="117" column="53" lean-forward="true" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pollution_server_sup.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/pollution_test.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="74" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/pollution_gen_server_test.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pollution_server.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pollution_gen_server.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
