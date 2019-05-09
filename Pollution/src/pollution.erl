@@ -49,7 +49,7 @@ addStationSecure(Name, Coordinates, Monitor, false, false) ->
   Station = #station{coordinates = Coordinates, name = Name, measurements = []},
   {NameStation#{Name => Station}, CoordsName#{Coordinates => Name}};
 addStationSecure(_, _, Monitor, _, _) ->
-  Monitor.
+  stationExists.
 
 applySecureFunction(none, DateTime, MeasureType, Value, Monitor, Function) ->
   {NameStation, CoordsName} = Monitor,

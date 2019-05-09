@@ -10,11 +10,11 @@
 -author("pawel").
 
 %% API
--export([start/0, stop/0, addStation/2, addValue/4, removeValue/3, getOneValue/3, getStationMean/2, getDailyMean/2, getHourlyMean/3]).
+-export([start/0, stop/0, addStation/2, addValue/4, removeValue/3, getOneValue/3, getStationMean/2, getDailyMean/2, getHourlyMean/3, crash/0]).
 -export([init/0]).
 
 start() ->
-  register(pollutionServer, spawn(pollution_server, init, [])).
+  register(pollutionServer, spawn_link(pollution_server, init, [])).
 
 stop() ->
   pollutionServer ! stop.
@@ -24,8 +24,8 @@ init() ->
 
 %% server
 
-checkAndLoop(ClientPid, OldMonitor, noSuchStation) ->
-  ClientPid ! {reply, noSuchStation},
+checkAndLoop(ClientPid, OldMonitor, Code) when is_atom(Code)->
+  ClientPid ! {reply, Code},
   loop(OldMonitor);
 checkAndLoop(ClientPid, OldMonitor, Result) when is_number(Result) ->
   ClientPid ! {reply, Result},
@@ -50,7 +50,10 @@ loop(Monitor) ->
     {request, Pid, getDailyMean, Arguments} ->
       checkAndLoop(Pid, Monitor, apply(pollution, getDailyMean, [Monitor | Arguments]));
     {request, Pid, getHourlyMean, Arguments} ->
-      checkAndLoop(Pid, Monitor, apply(pollution, getHourlyMean, [Monitor | Arguments]))
+      checkAndLoop(Pid, Monitor, apply(pollution, getHourlyMean, [Monitor | Arguments]));
+    {request, Pid, letItCrush, Arguments} ->
+      Pid ! {reply, ok},
+      maps:get(1,1)
   end.
 
 %% client
@@ -68,3 +71,4 @@ getOneValue(Key, DateTime, MeasureType) -> call(getOneValue, [Key, DateTime, Mea
 getStationMean(Key, MeasureType) -> call(getStationMean, [Key, MeasureType]).
 getDailyMean(Date, MeasureType) -> call(getDailyMean, [Date, MeasureType]).
 getHourlyMean(Key, Time, MeasureType) -> call(getHourlyMean, [Key, Time, MeasureType]).
+crash() -> call(letItCrush, []).
