@@ -93,7 +93,7 @@ removeValueSecure(Name, DateTime, MeasureType, _, NameStation, CoordsName) ->
   UpdatedMeasurements = lists:filter(Pred, Measurements),
   {NameStation#{Name := Station#station{measurements = UpdatedMeasurements}}, CoordsName}.
 
-unpackValue([]) -> "No measurement";
+unpackValue([]) -> noMeasurement;
 unpackValue([#measurement{value = Value}|_]) -> Value.
 
 getValueSecure(Name, DateTime, MeasureType, _, NameStation, _) ->
@@ -124,7 +124,7 @@ hourlyMeanSecure(Name, Time, MeasureType, _, NameStation, _) ->
   FilteredMeasurements = lists:filter(Pred, Measurements),
   calculateMean(FilteredMeasurements).
 
-calculateMean([]) -> "No measurements";
+calculateMean([]) -> noMeasurements;
 calculateMean(Measurements) ->
   FSum = fun(#measurement{value = Val}, Acc) -> Acc + Val end,
   FCount = fun(_, Acc) -> Acc + 1 end,
